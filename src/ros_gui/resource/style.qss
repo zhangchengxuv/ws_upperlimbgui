@@ -1,0 +1,124 @@
+/* ================================
+   全局
+================================ */
+QWidget {
+    font-family: "Segoe UI", "Microsoft YaHei";
+    font-size: 13px;
+    background-color: #1e1e1e;
+    color: #dddddd;
+}
+
+/* ================================
+   GroupBox（分区）
+================================ */
+QGroupBox {
+    border: 1px solid #3a3a3a;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 8px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 2px 6px;
+    color: #bbbbbb;
+}
+
+/* ================================
+   按钮（模式控制）
+================================ */
+QPushButton {
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #3a3a3a;
+}
+
+QPushButton:pressed {
+    background-color: #555;
+}
+
+QPushButton:checked {
+    background-color: #0078d7;
+    border: 1px solid #005a9e;
+    color: white;
+}
+
+/* ================================
+   表格
+================================ */
+QTableWidget {
+    background-color: #252526;
+    gridline-color: #3a3a3a;
+    border: 1px solid #3a3a3a;
+}
+
+QHeaderView::section {
+    background-color: #2d2d2d;
+    padding: 4px;
+    border: 1px solid #3a3a3a;
+    color: #cccccc;
+}
+
+QTableWidget::item {
+    padding: 4px;
+}
+
+/* ================================
+   日志窗口
+================================ */
+QTextEdit {
+    background-color: #1e1e1e;
+    border: 1px solid #3a3a3a;
+}
+
+/* ================================
+   状态指示灯（核心）
+================================ */
+QLabel[state="ok"] {
+    background-color: #00c000;
+    border: 1px solid #008000;
+    border-radius: 3px;
+}
+
+QLabel[state="error"] {
+    background-color: #d00000;
+    border: 1px solid #800000;
+    border-radius: 3px;
+}
+
+QLabel[state="idle"] {
+    background-color: #888888;
+    border: 1px solid #555555;
+    border-radius: 3px;
+}
+
+/* 当前模式颜色 */
+QLabel[state="mode_idle"] {
+    background-color: #888888;
+}
+
+QLabel[state="mode_preset"] {
+    background-color: #0078d7;
+}
+
+QLabel[state="mode_active"] {
+    background-color: #e68a00;
+}
+
+QLabel[state="mode_zero"] {
+    background-color: #00c000;
+}
+
+/* ================================
+   时间
+================================ */
+QLabel#timeLabel {
+    color: #888888;
+    font-size: 12px;
+}

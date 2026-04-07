@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 14.0.1, 2026-03-13T21:34:01. -->
+<!-- Written by QtCreator 14.0.1, 2026-04-08T00:21:17. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -129,9 +129,9 @@
     <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.CustomParsers"/>
     <value type="bool" key="ProjectExplorer.BuildConfiguration.ParseStandardOutput">false</value>
     <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
-     <value type="QString">AMENT_PREFIX_PATH=/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/ros_gui:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner_testutils:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_runtime:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit2_tutorials:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_visual_tools:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_visualization:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_demo:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_capabilities:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_core:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_control_interface:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_simple_controller_manager:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_assistant:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_srdf_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_core_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_controllers:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_app_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_framework:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_servo:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_visualization:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_hybrid_planning:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning_interface:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_benchmarks:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_warehouse:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_robot_interaction:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_perception:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_pg70_support:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_move_group:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_ompl:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_occupancy_map_monitor:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_chomp:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_kinematics:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_chomp_optimizer_adapter:/home/zhangchenxu/MOVEIT/moveit2_ws/install/chomp_motion_planner:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_core:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_configs_utils:/home/zhangchenxu/MOVEIT/moveit2_ws/install/srdfdom:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rviz_marker_tools:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rosparam_shortcuts:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_msgs:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_support:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_pr2_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_panda_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_panda_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_fanuc_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_fanuc_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_common:/home/zhangchenxu/MOVEIT/moveit2_ws/install/launch_param_builder:/opt/ros/humble</value>
+     <value type="QString">AMENT_PREFIX_PATH=/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/ros_gui:/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/robot_urdf:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner_testutils:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_runtime:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit2_tutorials:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_visual_tools:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_visualization:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_demo:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_capabilities:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_core:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_control_interface:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_simple_controller_manager:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_assistant:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_srdf_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_core_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_controllers:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_app_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_framework:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_servo:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_visualization:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_hybrid_planning:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning_interface:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_benchmarks:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_warehouse:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_robot_interaction:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_perception:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_pg70_support:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_move_group:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_ompl:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_occupancy_map_monitor:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_chomp:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_kinematics:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_chomp_optimizer_adapter:/home/zhangchenxu/MOVEIT/moveit2_ws/install/chomp_motion_planner:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_core:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_configs_utils:/home/zhangchenxu/MOVEIT/moveit2_ws/install/srdfdom:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rviz_marker_tools:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rosparam_shortcuts:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_msgs:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_support:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_pr2_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_panda_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_panda_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_fanuc_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_fanuc_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_common:/home/zhangchenxu/MOVEIT/moveit2_ws/install/launch_param_builder:/opt/ros/humble</value>
      <value type="QString">CMAKE_MODULE_PATH=/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake</value>
-     <value type="QString">CMAKE_PREFIX_PATH=/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/ros_gui:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner_testutils:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_runtime:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit2_tutorials:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_visual_tools:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_visualization:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_demo:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_capabilities:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_core:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_control_interface:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_simple_controller_manager:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_assistant:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_srdf_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_core_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_controllers:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_app_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_framework:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_servo:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_visualization:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_hybrid_planning:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning_interface:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_benchmarks:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_warehouse:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_robot_interaction:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_perception:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_pg70_support:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_move_group:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_ompl:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_occupancy_map_monitor:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_chomp:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_kinematics:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_chomp_optimizer_adapter:/home/zhangchenxu/MOVEIT/moveit2_ws/install/chomp_motion_planner:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_core:/home/zhangchenxu/MOVEIT/moveit2_ws/install/srdfdom:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rviz_marker_tools:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rosparam_shortcuts:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_msgs:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_support:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_pr2_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_panda_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_panda_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_fanuc_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_fanuc_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_common</value>
+     <value type="QString">CMAKE_PREFIX_PATH=/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/ros_gui:/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/robot_urdf:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner_testutils:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_runtime:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit2_tutorials:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_visual_tools:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_visualization:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_demo:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_capabilities:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_core:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_control_interface:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_simple_controller_manager:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_assistant:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_srdf_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_core_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_controllers:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_app_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_framework:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_servo:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_visualization:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_hybrid_planning:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning_interface:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_benchmarks:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_warehouse:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_robot_interaction:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_perception:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_pg70_support:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_move_group:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_ompl:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_occupancy_map_monitor:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_chomp:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_kinematics:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_chomp_optimizer_adapter:/home/zhangchenxu/MOVEIT/moveit2_ws/install/chomp_motion_planner:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_core:/home/zhangchenxu/MOVEIT/moveit2_ws/install/srdfdom:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rviz_marker_tools:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rosparam_shortcuts:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_msgs:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_support:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_pr2_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_panda_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_panda_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_fanuc_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_fanuc_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_common</value>
      <value type="QString">COLCON_PREFIX_PATH=/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install:/home/zhangchenxu/MOVEIT/moveit2_ws/install</value>
      <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:path</value>
      <value type="QString">LD_LIBRARY_PATH=/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/ros_gui/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner_testutils/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_visual_tools/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_visualization/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_demo/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_capabilities/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_core/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_control_interface/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_simple_controller_manager/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_assistant/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_srdf_plugins/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_core_plugins/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_controllers/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_app_plugins/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_framework/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_servo/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_visualization/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_hybrid_planning/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning_interface/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_benchmarks/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_warehouse/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_robot_interaction/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_perception/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_move_group/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_ompl/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_chomp/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_kinematics/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_chomp_optimizer_adapter/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/chomp_motion_planner/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_core/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/srdfdom/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rviz_marker_tools/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rosparam_shortcuts/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib</value>
@@ -335,8 +335,484 @@
   </valuemap>
  </data>
  <data>
+  <variable>ProjectExplorer.Project.Target.1</variable>
+  <valuemap type="QVariantMap">
+   <value type="QString" key="DeviceType">Desktop</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.15.19 GCC 64bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.15.19 GCC 64bit</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.51519.gcc_64_kit</value>
+   <value type="qlonglong" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
+   <value type="qlonglong" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
+   <value type="qlonglong" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">0</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
+    </valuemap>
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">1</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
+    </valuemap>
+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.CustomParsers"/>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ParseStandardOutput">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
+     <value type="QString">AMENT_PREFIX_PATH=/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/ros_gui:/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/robot_urdf:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner_testutils:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_runtime:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit2_tutorials:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_visual_tools:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_visualization:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_demo:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_capabilities:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_core:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_control_interface:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_simple_controller_manager:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_assistant:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_srdf_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_core_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_controllers:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_app_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_framework:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_servo:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_visualization:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_hybrid_planning:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning_interface:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_benchmarks:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_warehouse:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_robot_interaction:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_perception:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_pg70_support:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_move_group:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_ompl:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_occupancy_map_monitor:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_chomp:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_kinematics:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_chomp_optimizer_adapter:/home/zhangchenxu/MOVEIT/moveit2_ws/install/chomp_motion_planner:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_core:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_configs_utils:/home/zhangchenxu/MOVEIT/moveit2_ws/install/srdfdom:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rviz_marker_tools:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rosparam_shortcuts:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_msgs:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_support:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_pr2_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_panda_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_panda_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_fanuc_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_fanuc_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_common:/home/zhangchenxu/MOVEIT/moveit2_ws/install/launch_param_builder:/opt/ros/humble</value>
+     <value type="QString">CMAKE_MODULE_PATH=/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake</value>
+     <value type="QString">CMAKE_PREFIX_PATH=/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/ros_gui:/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/robot_urdf:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner_testutils:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_runtime:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit2_tutorials:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_visual_tools:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_visualization:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_demo:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_capabilities:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_core:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_control_interface:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_simple_controller_manager:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_assistant:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_srdf_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_core_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_controllers:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_app_plugins:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_framework:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_servo:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_visualization:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_hybrid_planning:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning_interface:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_benchmarks:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_warehouse:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_robot_interaction:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_perception:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_pg70_support:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_move_group:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_ompl:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_occupancy_map_monitor:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_chomp:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_kinematics:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_chomp_optimizer_adapter:/home/zhangchenxu/MOVEIT/moveit2_ws/install/chomp_motion_planner:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_core:/home/zhangchenxu/MOVEIT/moveit2_ws/install/srdfdom:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rviz_marker_tools:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rosparam_shortcuts:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_msgs:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_support:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_pr2_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_panda_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_panda_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_fanuc_moveit_config:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_fanuc_description:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_common</value>
+     <value type="QString">COLCON_PREFIX_PATH=/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install:/home/zhangchenxu/MOVEIT/moveit2_ws/install</value>
+     <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:path</value>
+     <value type="QString">LD_LIBRARY_PATH=/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/ros_gui/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner_testutils/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/pilz_industrial_motion_planner/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_visual_tools/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_visualization/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_demo/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_capabilities/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_core/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_control_interface/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_simple_controller_manager/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_assistant/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_srdf_plugins/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_core_plugins/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_controllers/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_app_plugins/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_setup_framework/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_servo/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_visualization/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_hybrid_planning/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning_interface/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_benchmarks/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_warehouse/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_robot_interaction/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_perception/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_move_group/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_ompl/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_planning/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_planners_chomp/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_kinematics/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_chomp_optimizer_adapter/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/chomp_motion_planner/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_core/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/srdfdom/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rviz_marker_tools/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/rosparam_shortcuts/lib:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib</value>
+     <value type="QString">PATH=/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_core/bin:/opt/ros/humble/bin:/home/zhangchenxu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin</value>
+     <value type="QString">PYTHONPATH=/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/ros_gui/local/lib/python3.10/dist-packages:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/zhangchenxu/MOVEIT/moveit2_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/zhangchenxu/MOVEIT/moveit2_ws/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages:/home/zhangchenxu/MOVEIT/moveit2_ws/install/launch_param_builder/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages</value>
+     <value type="QString">QSG_RHI_BACKEND=opengl</value>
+     <value type="QString">ROS_DISTRO=humble</value>
+     <value type="QString">ROS_LOCALHOST_ONLY=0</value>
+     <value type="QString">ROS_PYTHON_VERSION=3</value>
+     <value type="QString">ROS_VERSION=2</value>
+     <value type="QString">SHLVL=1</value>
+     <value type="QString">XMODIFIERS=@im</value>
+     <value type="QString">_=/usr/bin/env</value>
+    </valuelist>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Debug</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSBuildConfiguration</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.BuildSystem">2</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.CMakeBuildType">0</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">0</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
+    </valuemap>
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">1</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
+    </valuemap>
+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.CustomParsers"/>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ParseStandardOutput">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Release</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSBuildConfiguration</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.BuildSystem">2</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.CMakeBuildType">1</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.2">
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">0</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
+    </valuemap>
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">1</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
+    </valuemap>
+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.CustomParsers"/>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ParseStandardOutput">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Release with Debug Information</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSBuildConfiguration</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.BuildSystem">2</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.CMakeBuildType">2</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.3">
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">0</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
+    </valuemap>
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">1</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
+    </valuemap>
+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.CustomParsers"/>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ParseStandardOutput">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Minimum Size Release</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSBuildConfiguration</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.BuildSystem">2</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.CMakeBuildType">3</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.4">
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">0</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
+    </valuemap>
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">1</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
+    </valuemap>
+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.CustomParsers"/>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ParseStandardOutput">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">User Defined</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSBuildConfiguration</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.BuildSystem">2</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.CMakeBuildType">4</value>
+   </valuemap>
+   <value type="qlonglong" key="ProjectExplorer.Target.BuildConfigurationCount">5</value>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.DeployConfiguration.0">
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">0</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">部署</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">部署</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Deploy</value>
+    </valuemap>
+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">1</value>
+    <valuemap type="QVariantMap" key="ProjectExplorer.DeployConfiguration.CustomData"/>
+    <value type="bool" key="ProjectExplorer.DeployConfiguration.CustomDataEnabled">false</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.DefaultDeployConfiguration</value>
+   </valuemap>
+   <value type="qlonglong" key="ProjectExplorer.Target.DeployConfigurationCount">1</value>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.0">
+    <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
+    <value type="bool" key="Analyzer.QmlProfiler.Settings.UseGlobalSettings">true</value>
+    <value type="int" key="Analyzer.Valgrind.Callgrind.CostFormat">0</value>
+    <value type="bool" key="Analyzer.Valgrind.Settings.UseGlobalSettings">true</value>
+    <valuelist type="QVariantList" key="CustomOutputParsers"/>
+    <value type="int" key="PE.EnvironmentAspect.Base">2</value>
+    <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
+    <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
+    <value type="QString" key="PerfRecordArgsId">-e cpu-cycles --call-graph dwarf,4096 -F 250</value>
+    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable">/home/zhangchenxu/Documents/00_Project/MyProject/ws_upperlimbgui/install/ros_gui/lib/ros_gui/ros_gui_node</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey"></value>
+    <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">true</value>
+    <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
+    <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+   </valuemap>
+   <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>ProjectExplorer.Project.Target.2</variable>
+  <valuemap type="QVariantMap">
+   <value type="QString" key="DeviceType">Desktop</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">桌面</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">桌面</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{5b43b483-9831-4daf-859d-062c201655b2}</value>
+   <value type="qlonglong" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
+   <value type="qlonglong" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
+   <value type="qlonglong" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">0</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
+    </valuemap>
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">1</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
+    </valuemap>
+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.CustomParsers"/>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ParseStandardOutput">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Debug</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSBuildConfiguration</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.BuildSystem">2</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.CMakeBuildType">0</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">0</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
+    </valuemap>
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">1</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
+    </valuemap>
+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.CustomParsers"/>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ParseStandardOutput">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Release</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSBuildConfiguration</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.BuildSystem">2</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.CMakeBuildType">1</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.2">
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">0</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
+    </valuemap>
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">1</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
+    </valuemap>
+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.CustomParsers"/>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ParseStandardOutput">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Release with Debug Information</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSBuildConfiguration</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.BuildSystem">2</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.CMakeBuildType">2</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.3">
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">0</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
+    </valuemap>
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">1</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
+    </valuemap>
+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.CustomParsers"/>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ParseStandardOutput">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Minimum Size Release</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSBuildConfiguration</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.BuildSystem">2</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.CMakeBuildType">3</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.4">
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">0</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">构建</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
+    </valuemap>
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSColconStep</value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.CMakeArguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSColconStep.ColconArguments"></value>
+      <value type="int" key="ROSProjectManager.ROSColconStep.Target">1</value>
+     </valuemap>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">清除</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
+    </valuemap>
+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.CustomParsers"/>
+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ParseStandardOutput">false</value>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">User Defined</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSBuildConfiguration</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.BuildSystem">2</value>
+    <value type="int" key="ROSProjectManager.ROSBuildConfiguration.CMakeBuildType">4</value>
+   </valuemap>
+   <value type="qlonglong" key="ProjectExplorer.Target.BuildConfigurationCount">5</value>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.DeployConfiguration.0">
+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">0</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">部署</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">部署</value>
+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Deploy</value>
+    </valuemap>
+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">1</value>
+    <valuemap type="QVariantMap" key="ProjectExplorer.DeployConfiguration.CustomData"/>
+    <value type="bool" key="ProjectExplorer.DeployConfiguration.CustomDataEnabled">false</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.DefaultDeployConfiguration</value>
+   </valuemap>
+   <value type="qlonglong" key="ProjectExplorer.Target.DeployConfigurationCount">1</value>
+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.0">
+    <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
+    <value type="bool" key="Analyzer.QmlProfiler.Settings.UseGlobalSettings">true</value>
+    <value type="int" key="Analyzer.Valgrind.Callgrind.CostFormat">0</value>
+    <value type="bool" key="Analyzer.Valgrind.Settings.UseGlobalSettings">true</value>
+    <valuelist type="QVariantList" key="CustomOutputParsers"/>
+    <value type="int" key="PE.EnvironmentAspect.Base">2</value>
+    <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
+    <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
+    <value type="QString" key="PerfRecordArgsId">-e cpu-cycles --call-graph dwarf,4096 -F 250</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey"></value>
+    <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">false</value>
+    <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
+    <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+   </valuemap>
+   <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
+  </valuemap>
+ </data>
+ <data>
   <variable>ProjectExplorer.Project.TargetCount</variable>
-  <value type="qlonglong">1</value>
+  <value type="qlonglong">3</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.Updater.FileVersion</variable>
