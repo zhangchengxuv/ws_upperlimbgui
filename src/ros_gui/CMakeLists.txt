@@ -14,6 +14,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(ament_index_cpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 find_package(rosidl_default_generators REQUIRED)
 find_package(rosidl_default_runtime REQUIRED)
@@ -21,7 +22,8 @@ find_package(rosidl_default_runtime REQUIRED)
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
 
 set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOUIC OFF)
+set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 # ========================================
@@ -42,7 +44,7 @@ add_executable(ros_gui_node
   src/main.cpp
   src/mainwindow.cpp
   src/mainwindow.h
-  src/mainwindow.ui
+  resources.qrc
 )
 
 target_include_directories(ros_gui_node PRIVATE
@@ -53,6 +55,7 @@ target_include_directories(ros_gui_node PRIVATE
 ament_target_dependencies(ros_gui_node
   rclcpp
   std_msgs
+  sensor_msgs
   ament_index_cpp
 )
 
