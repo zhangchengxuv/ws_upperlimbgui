@@ -15,11 +15,10 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(ament_index_cpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
-
-find_package(rosidl_default_generators REQUIRED)
-find_package(rosidl_default_runtime REQUIRED)
-
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
+
+# 这里才是你要使用的自定义消息包
+find_package(upperlimb_robot REQUIRED)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC OFF)
@@ -27,23 +26,11 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 # ========================================
-# ROS2 Interfaces
-# ========================================
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/ControlCommand.msg"
-  "msg/RobotState.msg"
-  "msg/SystemState.msg"
-)
-
-ament_export_dependencies(rosidl_default_runtime)
-
-# ========================================
 # Executable
 # ========================================
 add_executable(ros_gui_node
   src/main.cpp
   src/mainwindow.cpp
-  src/mainwindow.h
   resources.qrc
 )
 
@@ -57,19 +44,11 @@ ament_target_dependencies(ros_gui_node
   std_msgs
   sensor_msgs
   ament_index_cpp
+  upperlimb_robot
 )
 
 target_link_libraries(ros_gui_node
   Qt5::Widgets
-)
-
-# 让可执行文件依赖消息类型支持
-rosidl_get_typesupport_target(cpp_typesupport_target
-  ${PROJECT_NAME} "rosidl_typesupport_cpp"
-)
-
-target_link_libraries(ros_gui_node
-  ${cpp_typesupport_target}
 )
 
 install(TARGETS

@@ -10,13 +10,14 @@
 #include <QMutex>
 
 #include <thread>
+#include <vector>
 
 #include <rclcpp/rclcpp.hpp>
 #include <rclcpp/executors/single_threaded_executor.hpp>
-#include "ros_gui/msg/control_command.hpp"
-#include "ros_gui/msg/system_state.hpp"
-#include "ros_gui/msg/robot_state.hpp"
 
+#include "upperlimb_robot/msg/control_command.hpp"
+#include "upperlimb_robot/msg/system_state.hpp"
+#include "upperlimb_robot/msg/robot_state.hpp"
 
 // ================================
 // 控制模式枚举
@@ -64,15 +65,14 @@ private slots:
     void onLeftPassivePID();
     void onLeftPassivePD();
 
-
     void refreshUi();
 
 private:
     // ================================
     // ROS 回调
     // ================================
-    void systemStateCallback(const ros_gui::msg::SystemState::SharedPtr msg);
-    void robotStateCallback(const ros_gui::msg::RobotState::SharedPtr msg);
+    void systemStateCallback(const upperlimb_robot::msg::SystemState::SharedPtr msg);
+    void robotStateCallback(const upperlimb_robot::msg::RobotState::SharedPtr msg);
 
     void publishCommand(int cmd);
     void appendLog(const QString &text);
@@ -86,9 +86,9 @@ private:
     // ROS2
     // ================================
     rclcpp::Node::SharedPtr node_;
-    rclcpp::Publisher<ros_gui::msg::ControlCommand>::SharedPtr control_command_pub_;
-    rclcpp::Subscription<ros_gui::msg::SystemState>::SharedPtr system_state_sub_;
-    rclcpp::Subscription<ros_gui::msg::RobotState>::SharedPtr robot_state_sub_;
+    rclcpp::Publisher<upperlimb_robot::msg::ControlCommand>::SharedPtr control_command_pub_;
+    rclcpp::Subscription<upperlimb_robot::msg::SystemState>::SharedPtr system_state_sub_;
+    rclcpp::Subscription<upperlimb_robot::msg::RobotState>::SharedPtr robot_state_sub_;
     rclcpp::executors::SingleThreadedExecutor::SharedPtr executor_;
 
     std::thread ros_spin_thread_;

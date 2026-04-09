@@ -21,16 +21,16 @@ MainWindow::MainWindow(QWidget *parent)
     node_ = rclcpp::Node::make_shared("qt_gui_node");
 
     control_command_pub_ =
-        node_->create_publisher<ros_gui::msg::ControlCommand>("control_command", 10);
+        node_->create_publisher<upperlimb_robot::msg::ControlCommand>("control_command", 10);
 
     system_state_sub_ =
-        node_->create_subscription<ros_gui::msg::SystemState>(
+        node_->create_subscription<upperlimb_robot::msg::SystemState>(
             "system_state",
             10,
             std::bind(&MainWindow::systemStateCallback, this, std::placeholders::_1));
 
     robot_state_sub_ =
-        node_->create_subscription<ros_gui::msg::RobotState>(
+        node_->create_subscription<upperlimb_robot::msg::RobotState>(
             "robot_state",
             10,
             std::bind(&MainWindow::robotStateCallback, this, std::placeholders::_1));
@@ -348,7 +348,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::publishCommand(int cmd)
 {
-    ros_gui::msg::ControlCommand msg;
+    upperlimb_robot::msg::ControlCommand msg;
     msg.command = cmd;
     control_command_pub_->publish(msg);
 
@@ -397,7 +397,7 @@ void MainWindow::onLeftPassivePD()
 
 
 
-void MainWindow::systemStateCallback(const ros_gui::msg::SystemState::SharedPtr msg)
+void MainWindow::systemStateCallback(const upperlimb_robot::msg::SystemState::SharedPtr msg)
 {
     QMutexLocker locker(&dataMutex_);
     controller_init_ = msg->controller_init;
@@ -405,7 +405,7 @@ void MainWindow::systemStateCallback(const ros_gui::msg::SystemState::SharedPtr 
     system_ready_ = msg->system_ready;
 }
 
-void MainWindow::robotStateCallback(const ros_gui::msg::RobotState::SharedPtr msg)
+void MainWindow::robotStateCallback(const upperlimb_robot::msg::RobotState::SharedPtr msg)
 {
     QMutexLocker locker(&dataMutex_);
     position_ = msg->position;
