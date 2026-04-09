@@ -135,6 +135,8 @@ MainWindow::MainWindow(QWidget *parent)
     rightPresetButton_ = new QPushButton("右预设位", controlGroup);
     activeButton_ = new QPushButton("左主动模式", controlGroup);
     zeroForceButton_ = new QPushButton("左零力模式", controlGroup);
+    leftPassivePIDButton_ = new QPushButton("左正弦被动（PID）",controlGroup);
+    leftPassivePDButton_ = new QPushButton("左正弦被动（PD）",controlGroup);
 
     idleButton_->setCheckable(true);
     leftPresetButton_->setCheckable(true);
@@ -142,6 +144,9 @@ MainWindow::MainWindow(QWidget *parent)
     activeButton_->setCheckable(true);
     zeroForceButton_->setCheckable(true);
     idleButton_->setChecked(true);
+    leftPassivePIDButton_->setChecked(true);
+    leftPassivePDButton_->setChecked(true);
+
 
     QButtonGroup *modeGroup = new QButtonGroup(this);
     modeGroup->setExclusive(true);
@@ -150,18 +155,25 @@ MainWindow::MainWindow(QWidget *parent)
     modeGroup->addButton(rightPresetButton_);
     modeGroup->addButton(activeButton_);
     modeGroup->addButton(zeroForceButton_);
+    modeGroup->addButton(leftPassivePIDButton_);
+    modeGroup->addButton(leftPassivePDButton_);
+
 
     connect(idleButton_, &QPushButton::clicked, this, &MainWindow::onIdleClicked);
     connect(leftPresetButton_, &QPushButton::clicked, this, &MainWindow::onLeftPresetClicked);
     connect(rightPresetButton_, &QPushButton::clicked, this, &MainWindow::onRightPresetClicked);
     connect(activeButton_, &QPushButton::clicked, this, &MainWindow::onActiveClicked);
     connect(zeroForceButton_, &QPushButton::clicked, this, &MainWindow::onZeroForceClicked);
+    connect(leftPassivePIDButton_,&QPushButton::clicked, this, &MainWindow::onLeftPassivePID);
+    connect(leftPassivePDButton_,&QPushButton::clicked, this, &MainWindow::onLeftPassivePD);
 
     controlLayout->addWidget(idleButton_);
     controlLayout->addWidget(leftPresetButton_);
     controlLayout->addWidget(rightPresetButton_);
     controlLayout->addWidget(activeButton_);
     controlLayout->addWidget(zeroForceButton_);
+    controlLayout->addWidget(leftPassivePIDButton_);
+    controlLayout->addWidget(leftPassivePDButton_);
     controlLayout->addStretch();
 
     // ================================
@@ -373,6 +385,18 @@ void MainWindow::onZeroForceClicked()
     publishCommand(MODE_ZERO_FORCE);
 }
 
+void MainWindow::onLeftPassivePID()
+{
+    publishCommand(MODE_PASSIVE);
+}
+
+void MainWindow::onLeftPassivePD()
+{
+    publishCommand(MODE_PASSIVE_SINE_PD_FF);
+}
+
+
+
 void MainWindow::systemStateCallback(const ros_gui::msg::SystemState::SharedPtr msg)
 {
     QMutexLocker locker(&dataMutex_);
@@ -496,6 +520,10 @@ QString MainWindow::modeToString(int mode) const
         return "左主动模式";
     case MODE_ZERO_FORCE:
         return "左零力模式";
+    case MODE_PASSIVE:
+        return "左臂正弦被动模式（PID跟踪）";
+    case MODE_PASSIVE_SINE_PD_FF:
+        return "左臂正弦被动模式（PD+前馈跟踪）";
     default:
         return QString("未知(%1)").arg(mode);
     }

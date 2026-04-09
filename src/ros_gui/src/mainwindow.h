@@ -24,11 +24,27 @@
 // ================================
 enum ControlMode : int
 {
+    // 空闲模式
+    // 默认不输出控制命令
     MODE_IDLE = 0,
+
+    // 左臂预设位置模式
     MODE_LEFT_PRESET_POSITION = 1,
+
+    // 右臂预设位置模式
     MODE_RIGHT_PRESET_POSITION = 2,
+
+    // 左臂主动训练模式
     MODE_ACTIVE = 3,
+
+    // 左臂零力模式
     MODE_ZERO_FORCE = 4,
+
+    // 左臂正弦被动模式（PID跟踪）
+    MODE_PASSIVE = 5,
+
+    // 左臂正弦被动模式（PD+前馈跟踪）
+    MODE_PASSIVE_SINE_PD_FF = 6,
 };
 
 class MainWindow : public QMainWindow
@@ -45,6 +61,9 @@ private slots:
     void onRightPresetClicked();
     void onActiveClicked();
     void onZeroForceClicked();
+    void onLeftPassivePID();
+    void onLeftPassivePD();
+
 
     void refreshUi();
 
@@ -96,6 +115,8 @@ private:
     QPushButton *rightPresetButton_ = nullptr;
     QPushButton *activeButton_ = nullptr;
     QPushButton *zeroForceButton_ = nullptr;
+    QPushButton *leftPassivePIDButton_ = nullptr;
+    QPushButton *leftPassivePDButton_ = nullptr;
 
     QTableWidget *jointTable_ = nullptr;
 
