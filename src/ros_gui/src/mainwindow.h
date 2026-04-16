@@ -46,6 +46,11 @@ enum ControlMode : int
 
     // 左臂正弦被动模式（PD+前馈跟踪）
     MODE_PASSIVE_SINE_PD_FF = 6,
+
+    // 左臂正弦被动模式（扭矩输出）
+    MODE_PASSIVE_TORQUE = 7,
+
+
 };
 
 class MainWindow : public QMainWindow
@@ -64,6 +69,7 @@ private slots:
     void onZeroForceClicked();
     void onLeftPassivePID();
     void onLeftPassivePD();
+    void onLeftPassiveTPD();
 
     void refreshUi();
 
@@ -117,6 +123,7 @@ private:
     QPushButton *zeroForceButton_ = nullptr;
     QPushButton *leftPassivePIDButton_ = nullptr;
     QPushButton *leftPassivePDButton_ = nullptr;
+    QPushButton *leftPassiveTPDButton_ = nullptr;
 
     QTableWidget *jointTable_ = nullptr;
 

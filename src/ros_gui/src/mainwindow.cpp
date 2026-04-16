@@ -137,6 +137,7 @@ MainWindow::MainWindow(QWidget *parent)
     zeroForceButton_ = new QPushButton("左零力模式", controlGroup);
     leftPassivePIDButton_ = new QPushButton("左正弦被动（PID）",controlGroup);
     leftPassivePDButton_ = new QPushButton("左正弦被动（PD）",controlGroup);
+    leftPassiveTPDButton_ = new QPushButton("左正弦被动（扭矩模式PD）",controlGroup);
 
     idleButton_->setCheckable(true);
     leftPresetButton_->setCheckable(true);
@@ -146,6 +147,7 @@ MainWindow::MainWindow(QWidget *parent)
     idleButton_->setChecked(true);
     leftPassivePIDButton_->setChecked(true);
     leftPassivePDButton_->setChecked(true);
+    leftPassiveTPDButton_->setChecked(true);
 
 
     QButtonGroup *modeGroup = new QButtonGroup(this);
@@ -157,6 +159,8 @@ MainWindow::MainWindow(QWidget *parent)
     modeGroup->addButton(zeroForceButton_);
     modeGroup->addButton(leftPassivePIDButton_);
     modeGroup->addButton(leftPassivePDButton_);
+    modeGroup->addButton(leftPassiveTPDButton_);
+
 
 
     connect(idleButton_, &QPushButton::clicked, this, &MainWindow::onIdleClicked);
@@ -166,6 +170,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(zeroForceButton_, &QPushButton::clicked, this, &MainWindow::onZeroForceClicked);
     connect(leftPassivePIDButton_,&QPushButton::clicked, this, &MainWindow::onLeftPassivePID);
     connect(leftPassivePDButton_,&QPushButton::clicked, this, &MainWindow::onLeftPassivePD);
+    connect(leftPassiveTPDButton_,&QPushButton::clicked, this, &MainWindow::onLeftPassiveTPD);
 
     controlLayout->addWidget(idleButton_);
     controlLayout->addWidget(leftPresetButton_);
@@ -174,6 +179,7 @@ MainWindow::MainWindow(QWidget *parent)
     controlLayout->addWidget(zeroForceButton_);
     controlLayout->addWidget(leftPassivePIDButton_);
     controlLayout->addWidget(leftPassivePDButton_);
+    controlLayout->addWidget(leftPassiveTPDButton_);
     controlLayout->addStretch();
 
     // ================================
@@ -395,6 +401,11 @@ void MainWindow::onLeftPassivePD()
     publishCommand(MODE_PASSIVE_SINE_PD_FF);
 }
 
+void MainWindow::onLeftPassiveTPD()
+{
+    publishCommand(MODE_PASSIVE_TORQUE);
+}
+
 
 
 void MainWindow::systemStateCallback(const upperlimb_robot::msg::SystemState::SharedPtr msg)
@@ -524,6 +535,9 @@ QString MainWindow::modeToString(int mode) const
         return "左臂正弦被动模式（PID跟踪）";
     case MODE_PASSIVE_SINE_PD_FF:
         return "左臂正弦被动模式（PD+前馈跟踪）";
+    case MODE_PASSIVE_TORQUE:
+        return "左臂正弦被动模式（扭矩模式）";
+
     default:
         return QString("未知(%1)").arg(mode);
     }
