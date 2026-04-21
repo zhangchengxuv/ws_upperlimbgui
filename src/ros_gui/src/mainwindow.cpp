@@ -135,6 +135,8 @@ MainWindow::MainWindow(QWidget *parent)
     rightPresetButton_ = new QPushButton("右预设位", controlGroup);
     activeButton_ = new QPushButton("左主动模式", controlGroup);
     zeroForceButton_ = new QPushButton("左零力模式", controlGroup);
+    rightZeroForceButton_ = new QPushButton("右零力模式", controlGroup);
+    bilateralZeroForceButton_ = new QPushButton("双臂零力模式", controlGroup);
     leftPassivePIDButton_ = new QPushButton("左正弦被动（PID）",controlGroup);
     leftPassivePDButton_ = new QPushButton("左正弦被动（PD）",controlGroup);
     leftPassiveTPDButton_ = new QPushButton("左正弦被动（扭矩模式PD）",controlGroup);
@@ -144,6 +146,8 @@ MainWindow::MainWindow(QWidget *parent)
     rightPresetButton_->setCheckable(true);
     activeButton_->setCheckable(true);
     zeroForceButton_->setCheckable(true);
+    rightZeroForceButton_->setCheckable(true);
+    bilateralZeroForceButton_->setCheckable(true);
     idleButton_->setChecked(true);
     leftPassivePIDButton_->setChecked(true);
     leftPassivePDButton_->setChecked(true);
@@ -157,6 +161,8 @@ MainWindow::MainWindow(QWidget *parent)
     modeGroup->addButton(rightPresetButton_);
     modeGroup->addButton(activeButton_);
     modeGroup->addButton(zeroForceButton_);
+    modeGroup->addButton(rightZeroForceButton_);
+    modeGroup->addButton(bilateralZeroForceButton_);
     modeGroup->addButton(leftPassivePIDButton_);
     modeGroup->addButton(leftPassivePDButton_);
     modeGroup->addButton(leftPassiveTPDButton_);
@@ -171,12 +177,16 @@ MainWindow::MainWindow(QWidget *parent)
     connect(leftPassivePIDButton_,&QPushButton::clicked, this, &MainWindow::onLeftPassivePID);
     connect(leftPassivePDButton_,&QPushButton::clicked, this, &MainWindow::onLeftPassivePD);
     connect(leftPassiveTPDButton_,&QPushButton::clicked, this, &MainWindow::onLeftPassiveTPD);
+    connect(rightZeroForceButton_, &QPushButton::clicked, this, &MainWindow::onRightZeroForceClicked);
+    connect(bilateralZeroForceButton_, &QPushButton::clicked, this, &MainWindow::onBilateralZeroForceClicked);
 
     controlLayout->addWidget(idleButton_);
     controlLayout->addWidget(leftPresetButton_);
     controlLayout->addWidget(rightPresetButton_);
     controlLayout->addWidget(activeButton_);
     controlLayout->addWidget(zeroForceButton_);
+    controlLayout->addWidget(rightZeroForceButton_);
+    controlLayout->addWidget(bilateralZeroForceButton_);
     controlLayout->addWidget(leftPassivePIDButton_);
     controlLayout->addWidget(leftPassivePDButton_);
     controlLayout->addWidget(leftPassiveTPDButton_);
@@ -406,7 +416,15 @@ void MainWindow::onLeftPassiveTPD()
     publishCommand(MODE_PASSIVE_TORQUE);
 }
 
+void MainWindow::onRightZeroForceClicked()
+{
+    publishCommand(MODE_RIGHT_ZERO_FORCE);
+}
 
+void MainWindow::onBilateralZeroForceClicked()
+{
+    publishCommand(MODE_BILATERAL_ZERO_FORCE);
+}
 
 void MainWindow::systemStateCallback(const upperlimb_robot::msg::SystemState::SharedPtr msg)
 {
@@ -537,6 +555,10 @@ QString MainWindow::modeToString(int mode) const
         return "左臂正弦被动模式（PD+前馈跟踪）";
     case MODE_PASSIVE_TORQUE:
         return "左臂正弦被动模式（扭矩模式）";
+    case MODE_RIGHT_ZERO_FORCE:
+        return "右零力模式";
+    case MODE_BILATERAL_ZERO_FORCE:
+        return "双臂零力模式";
 
     default:
         return QString("未知(%1)").arg(mode);

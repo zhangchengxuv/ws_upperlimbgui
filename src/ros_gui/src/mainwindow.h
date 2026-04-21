@@ -50,6 +50,11 @@ enum ControlMode : int
     // 左臂正弦被动模式（扭矩输出）
     MODE_PASSIVE_TORQUE = 7,
 
+    // 右臂零力模式
+    MODE_RIGHT_ZERO_FORCE = 8,
+
+    // 双臂零力模式
+    MODE_BILATERAL_ZERO_FORCE = 9,
 
 };
 
@@ -70,6 +75,8 @@ private slots:
     void onLeftPassivePID();
     void onLeftPassivePD();
     void onLeftPassiveTPD();
+    void onRightZeroForceClicked();
+    void onBilateralZeroForceClicked();
 
     void refreshUi();
 
@@ -124,6 +131,8 @@ private:
     QPushButton *leftPassivePIDButton_ = nullptr;
     QPushButton *leftPassivePDButton_ = nullptr;
     QPushButton *leftPassiveTPDButton_ = nullptr;
+    QPushButton *rightZeroForceButton_ = nullptr;
+    QPushButton *bilateralZeroForceButton_ = nullptr;
 
     QTableWidget *jointTable_ = nullptr;
 
