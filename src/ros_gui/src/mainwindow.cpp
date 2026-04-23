@@ -137,9 +137,10 @@ MainWindow::MainWindow(QWidget *parent)
     zeroForceButton_ = new QPushButton("左零力模式", controlGroup);
     rightZeroForceButton_ = new QPushButton("右零力模式", controlGroup);
     bilateralZeroForceButton_ = new QPushButton("双臂零力模式", controlGroup);
-    leftPassivePIDButton_ = new QPushButton("左正弦被动（PID）",controlGroup);
-    leftPassivePDButton_ = new QPushButton("左正弦被动（PD）",controlGroup);
-    leftPassiveTPDButton_ = new QPushButton("左正弦被动（扭矩模式PD）",controlGroup);
+    leftPassivePIDButton_ = new QPushButton("左正弦被动（PID）", controlGroup);
+    leftPassivePDButton_ = new QPushButton("左正弦被动（PD）", controlGroup);
+    leftPassiveTPDButton_ = new QPushButton("左正弦被动（扭矩模式PD）", controlGroup);
+    mirrorButton_ = new QPushButton("双臂镜像模式", controlGroup);
 
     idleButton_->setCheckable(true);
     leftPresetButton_->setCheckable(true);
@@ -152,7 +153,7 @@ MainWindow::MainWindow(QWidget *parent)
     leftPassivePIDButton_->setChecked(true);
     leftPassivePDButton_->setChecked(true);
     leftPassiveTPDButton_->setChecked(true);
-
+    mirrorButton_->setChecked(true);
 
     QButtonGroup *modeGroup = new QButtonGroup(this);
     modeGroup->setExclusive(true);
@@ -166,19 +167,19 @@ MainWindow::MainWindow(QWidget *parent)
     modeGroup->addButton(leftPassivePIDButton_);
     modeGroup->addButton(leftPassivePDButton_);
     modeGroup->addButton(leftPassiveTPDButton_);
-
-
+    modeGroup->addButton(mirrorButton_);
 
     connect(idleButton_, &QPushButton::clicked, this, &MainWindow::onIdleClicked);
     connect(leftPresetButton_, &QPushButton::clicked, this, &MainWindow::onLeftPresetClicked);
     connect(rightPresetButton_, &QPushButton::clicked, this, &MainWindow::onRightPresetClicked);
     connect(activeButton_, &QPushButton::clicked, this, &MainWindow::onActiveClicked);
     connect(zeroForceButton_, &QPushButton::clicked, this, &MainWindow::onZeroForceClicked);
-    connect(leftPassivePIDButton_,&QPushButton::clicked, this, &MainWindow::onLeftPassivePID);
-    connect(leftPassivePDButton_,&QPushButton::clicked, this, &MainWindow::onLeftPassivePD);
-    connect(leftPassiveTPDButton_,&QPushButton::clicked, this, &MainWindow::onLeftPassiveTPD);
+    connect(leftPassivePIDButton_, &QPushButton::clicked, this, &MainWindow::onLeftPassivePID);
+    connect(leftPassivePDButton_, &QPushButton::clicked, this, &MainWindow::onLeftPassivePD);
+    connect(leftPassiveTPDButton_, &QPushButton::clicked, this, &MainWindow::onLeftPassiveTPD);
     connect(rightZeroForceButton_, &QPushButton::clicked, this, &MainWindow::onRightZeroForceClicked);
     connect(bilateralZeroForceButton_, &QPushButton::clicked, this, &MainWindow::onBilateralZeroForceClicked);
+    connect(mirrorButton_, &QPushButton::clicked, this, &MainWindow::onMirrorClicked);
 
     controlLayout->addWidget(idleButton_);
     controlLayout->addWidget(leftPresetButton_);
@@ -190,6 +191,7 @@ MainWindow::MainWindow(QWidget *parent)
     controlLayout->addWidget(leftPassivePIDButton_);
     controlLayout->addWidget(leftPassivePDButton_);
     controlLayout->addWidget(leftPassiveTPDButton_);
+    controlLayout->addWidget(mirrorButton_);
     controlLayout->addStretch();
 
     // ================================
@@ -197,8 +199,6 @@ MainWindow::MainWindow(QWidget *parent)
     // ================================
     QSplitter *rightSplitter = new QSplitter(Qt::Vertical, mainSplitter);
     rightSplitter->setChildrenCollapsible(false);
-
-
 
     // ================================
     // 右上：数据区
@@ -341,9 +341,8 @@ MainWindow::MainWindow(QWidget *parent)
     executor_ = std::make_shared<rclcpp::executors::SingleThreadedExecutor>();
     executor_->add_node(node_);
 
-    ros_spin_thread_ = std::thread([this]() {
-        executor_->spin();
-    });
+    ros_spin_thread_ = std::thread([this]()
+                                   { executor_->spin(); });
 
     appendLog("GUI 启动完成");
 }
@@ -424,6 +423,11 @@ void MainWindow::onRightZeroForceClicked()
 void MainWindow::onBilateralZeroForceClicked()
 {
     publishCommand(MODE_BILATERAL_ZERO_FORCE);
+}
+
+void MainWindow::onMirrorClicked()
+{
+    publishCommand(MODE_MIRROR);
 }
 
 void MainWindow::systemStateCallback(const upperlimb_robot::msg::SystemState::SharedPtr msg)
@@ -510,7 +514,8 @@ void MainWindow::refreshUi()
     // 6~11 右臂
     // 12~17 左手
     // 18~23 左臂
-    auto getForce = [this](int idx) -> QString {
+    auto getForce = [this](int idx) -> QString
+    {
         if (idx >= 0 && idx < static_cast<int>(force_sensor_.size()))
         {
             return QString::number(force_sensor_[idx], 'f', 3);
@@ -559,6 +564,8 @@ QString MainWindow::modeToString(int mode) const
         return "右零力模式";
     case MODE_BILATERAL_ZERO_FORCE:
         return "双臂零力模式";
+    case MODE_MIRROR:
+        return "双臂镜像模式";
 
     default:
         return QString("未知(%1)").arg(mode);

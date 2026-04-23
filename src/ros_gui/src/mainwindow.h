@@ -56,6 +56,9 @@ enum ControlMode : int
     // 双臂零力模式
     MODE_BILATERAL_ZERO_FORCE = 9,
 
+    // 双臂镜像模式
+    MODE_MIRROR = 10,
+
 };
 
 class MainWindow : public QMainWindow
@@ -77,6 +80,7 @@ private slots:
     void onLeftPassiveTPD();
     void onRightZeroForceClicked();
     void onBilateralZeroForceClicked();
+    void onMirrorClicked();
 
     void refreshUi();
 
@@ -133,6 +137,7 @@ private:
     QPushButton *leftPassiveTPDButton_ = nullptr;
     QPushButton *rightZeroForceButton_ = nullptr;
     QPushButton *bilateralZeroForceButton_ = nullptr;
+    QPushButton *mirrorButton_ = nullptr;
 
     QTableWidget *jointTable_ = nullptr;
 
