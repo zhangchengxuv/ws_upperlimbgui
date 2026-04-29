@@ -56,8 +56,11 @@ enum ControlMode : int
     // 双臂零力模式
     MODE_BILATERAL_ZERO_FORCE = 9,
 
-    // 双臂镜像模式
+    // 双臂镜像模式（零力）
     MODE_MIRROR = 10,
+
+    // 双臂镜像模式（主动）
+    MODE_MIRROR_ACTIVE = 11,
 
 };
 
@@ -81,6 +84,7 @@ private slots:
     void onRightZeroForceClicked();
     void onBilateralZeroForceClicked();
     void onMirrorClicked();
+    void onMirrorActiveClicked();
 
     void refreshUi();
 
@@ -138,6 +142,7 @@ private:
     QPushButton *rightZeroForceButton_ = nullptr;
     QPushButton *bilateralZeroForceButton_ = nullptr;
     QPushButton *mirrorButton_ = nullptr;
+    QPushButton *mirrorActiveButton_ = nullptr;
 
     QTableWidget *jointTable_ = nullptr;
 
