@@ -61,10 +61,9 @@ enum ControlMode : int
 
     // 双臂镜像模式（主动）
     MODE_MIRROR_ACTIVE = 11,
-    
-     // 双手虚拟弹簧主动模式
-    MODE_ACTIVE_SPRING = 12,
 
+    // 双手虚拟弹簧主动模式
+    MODE_ACTIVE_SPRING = 12,
 };
 
 class MainWindow : public QMainWindow
@@ -148,8 +147,12 @@ private:
     QPushButton *mirrorButton_ = nullptr;
     QPushButton *mirrorActiveButton_ = nullptr;
     QPushButton *activeSpringButton_ = nullptr;
-    QTableWidget *jointTable_ = nullptr;
 
+    // 左右臂关节状态表分开显示
+    QTableWidget *leftJointTable_ = nullptr;
+    QTableWidget *rightJointTable_ = nullptr;
+
+    // 右手六维力
     QLabel *rightHandFxLabel_ = nullptr;
     QLabel *rightHandFyLabel_ = nullptr;
     QLabel *rightHandFzLabel_ = nullptr;
@@ -157,6 +160,7 @@ private:
     QLabel *rightHandMyLabel_ = nullptr;
     QLabel *rightHandMzLabel_ = nullptr;
 
+    // 右臂六维力
     QLabel *rightArmFxLabel_ = nullptr;
     QLabel *rightArmFyLabel_ = nullptr;
     QLabel *rightArmFzLabel_ = nullptr;
@@ -164,6 +168,7 @@ private:
     QLabel *rightArmMyLabel_ = nullptr;
     QLabel *rightArmMzLabel_ = nullptr;
 
+    // 左手六维力
     QLabel *leftHandFxLabel_ = nullptr;
     QLabel *leftHandFyLabel_ = nullptr;
     QLabel *leftHandFzLabel_ = nullptr;
@@ -171,6 +176,7 @@ private:
     QLabel *leftHandMyLabel_ = nullptr;
     QLabel *leftHandMzLabel_ = nullptr;
 
+    // 左臂六维力
     QLabel *leftArmFxLabel_ = nullptr;
     QLabel *leftArmFyLabel_ = nullptr;
     QLabel *leftArmFzLabel_ = nullptr;

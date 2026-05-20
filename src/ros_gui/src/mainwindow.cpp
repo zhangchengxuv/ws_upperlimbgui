@@ -11,6 +11,8 @@
 #include <QButtonGroup>
 #include <QMutexLocker>
 
+#include <algorithm>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
@@ -143,7 +145,7 @@ MainWindow::MainWindow(QWidget *parent)
     mirrorButton_ = new QPushButton("双臂镜像模式（零力）", controlGroup);
     mirrorActiveButton_ = new QPushButton("双臂镜像模式（主动）", controlGroup);
     activeSpringButton_ = new QPushButton("双手虚拟弹簧主动模式", controlGroup);
-
+    
     idleButton_->setCheckable(true);
     leftPresetButton_->setCheckable(true);
     rightPresetButton_->setCheckable(true);
@@ -151,12 +153,14 @@ MainWindow::MainWindow(QWidget *parent)
     zeroForceButton_->setCheckable(true);
     rightZeroForceButton_->setCheckable(true);
     bilateralZeroForceButton_->setCheckable(true);
+    leftPassivePIDButton_->setCheckable(true);
+    leftPassivePDButton_->setCheckable(true);
+    leftPassiveTPDButton_->setCheckable(true);
     mirrorButton_->setCheckable(true);
     mirrorActiveButton_->setCheckable(true);
+    activeSpringButton_->setCheckable(true);
+
     idleButton_->setChecked(true);
-    leftPassivePIDButton_->setChecked(true);
-    leftPassivePDButton_->setChecked(true);
-    leftPassiveTPDButton_->setChecked(true);
 
     QButtonGroup *modeGroup = new QButtonGroup(this);
     modeGroup->setExclusive(true);
@@ -217,58 +221,83 @@ MainWindow::MainWindow(QWidget *parent)
     dataMainLayout->setContentsMargins(0, 0, 0, 0);
     dataMainLayout->setSpacing(8);
 
-    // 关节状态表
+    // 关节状态表：左右臂分开显示，避免 20 行单表需要下翻
     QGroupBox *jointGroup = new QGroupBox("关节状态", dataWidget);
-    QVBoxLayout *jointLayout = new QVBoxLayout(jointGroup);
+    QHBoxLayout *jointLayout = new QHBoxLayout(jointGroup);
+    jointLayout->setContentsMargins(8, 8, 8, 8);
+    jointLayout->setSpacing(8);
 
-    jointTable_ = new QTableWidget(jointGroup);
-    jointTable_->setColumnCount(5);
-    jointTable_->setHorizontalHeaderLabels(
-        QStringList() << "轴号" << "位置(deg)" << "速度(deg/s)" << "力矩(Nm)" << "使能");
-    jointTable_->setRowCount(20);
-
-    // 拉伸，分别设置
-    jointTable_->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Fixed);
-    jointTable_->setColumnWidth(0, 40);
-
-    jointTable_->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
-    jointTable_->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);
-    jointTable_->horizontalHeader()->setSectionResizeMode(3, QHeaderView::Stretch);
-
-    jointTable_->horizontalHeader()->setSectionResizeMode(4, QHeaderView::Fixed);
-    jointTable_->setColumnWidth(4, 60);
-
-    // 表头文字居中
-    jointTable_->horizontalHeader()->setDefaultAlignment(Qt::AlignCenter);
-
-    jointTable_->verticalHeader()->setVisible(false);
-    jointTable_->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    jointTable_->setSelectionMode(QAbstractItemView::NoSelection);
-
-    for (int i = 0; i < 20; ++i)
+    auto createJointTable = [](QWidget *parent) -> QTableWidget *
     {
-        QTableWidgetItem *axisItem = new QTableWidgetItem(QString::number(i + 1));
-        axisItem->setTextAlignment(Qt::AlignCenter);
-        jointTable_->setItem(i, 0, axisItem);
+        QTableWidget *table = new QTableWidget(parent);
+        table->setColumnCount(5);
+        table->setHorizontalHeaderLabels(
+            QStringList() << "轴号" << "位置(deg)" << "速度(deg/s)" << "力矩(Nm)" << "使能");
+        table->setRowCount(10);
 
-        QTableWidgetItem *posItem = new QTableWidgetItem("--");
-        posItem->setTextAlignment(Qt::AlignCenter);
-        jointTable_->setItem(i, 1, posItem);
+        table->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Fixed);
+        table->setColumnWidth(0, 45);
 
-        QTableWidgetItem *velItem = new QTableWidgetItem("--");
-        velItem->setTextAlignment(Qt::AlignCenter);
-        jointTable_->setItem(i, 2, velItem);
+        table->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
+        table->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);
+        table->horizontalHeader()->setSectionResizeMode(3, QHeaderView::Stretch);
 
-        QTableWidgetItem *torqueItem = new QTableWidgetItem("--");
-        torqueItem->setTextAlignment(Qt::AlignCenter);
-        jointTable_->setItem(i, 3, torqueItem);
+        table->horizontalHeader()->setSectionResizeMode(4, QHeaderView::Fixed);
+        table->setColumnWidth(4, 60);
 
-        QTableWidgetItem *enableItem = new QTableWidgetItem("--");
-        enableItem->setTextAlignment(Qt::AlignCenter);
-        jointTable_->setItem(i, 4, enableItem);
+        table->horizontalHeader()->setDefaultAlignment(Qt::AlignCenter);
+        table->verticalHeader()->setVisible(false);
+        table->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        table->setSelectionMode(QAbstractItemView::NoSelection);
+
+        for (int i = 0; i < 10; ++i)
+        {
+            QTableWidgetItem *axisItem = new QTableWidgetItem(QString::number(i + 1));
+            axisItem->setTextAlignment(Qt::AlignCenter);
+            table->setItem(i, 0, axisItem);
+
+            QTableWidgetItem *posItem = new QTableWidgetItem("--");
+            posItem->setTextAlignment(Qt::AlignCenter);
+            table->setItem(i, 1, posItem);
+
+            QTableWidgetItem *velItem = new QTableWidgetItem("--");
+            velItem->setTextAlignment(Qt::AlignCenter);
+            table->setItem(i, 2, velItem);
+
+            QTableWidgetItem *torqueItem = new QTableWidgetItem("--");
+            torqueItem->setTextAlignment(Qt::AlignCenter);
+            table->setItem(i, 3, torqueItem);
+
+            QTableWidgetItem *enableItem = new QTableWidgetItem("--");
+            enableItem->setTextAlignment(Qt::AlignCenter);
+            table->setItem(i, 4, enableItem);
+        }
+
+        return table;
+    };
+
+    QGroupBox *leftJointGroup = new QGroupBox("左臂关节", jointGroup);
+    QVBoxLayout *leftJointLayout = new QVBoxLayout(leftJointGroup);
+    leftJointLayout->setContentsMargins(6, 6, 6, 6);
+
+    QGroupBox *rightJointGroup = new QGroupBox("右臂关节", jointGroup);
+    QVBoxLayout *rightJointLayout = new QVBoxLayout(rightJointGroup);
+    rightJointLayout->setContentsMargins(6, 6, 6, 6);
+
+    leftJointTable_ = createJointTable(leftJointGroup);
+    rightJointTable_ = createJointTable(rightJointGroup);
+
+    for (int i = 0; i < 10; ++i)
+    {
+        leftJointTable_->item(i, 0)->setText(QString("L%1").arg(i + 1));
+        rightJointTable_->item(i, 0)->setText(QString("R%1").arg(i + 1));
     }
 
-    jointLayout->addWidget(jointTable_);
+    leftJointLayout->addWidget(leftJointTable_);
+    rightJointLayout->addWidget(rightJointTable_);
+
+    jointLayout->addWidget(leftJointGroup);
+    jointLayout->addWidget(rightJointGroup);
 
     // 六维力区
     QGroupBox *forceGroup = new QGroupBox("六维力信息", dataWidget);
@@ -529,40 +558,50 @@ void MainWindow::refreshUi()
     timeLabel_->setText(now);
 
     // 更新关节表
-    const int jointCount = std::min<int>(20, position_.size());
-
-    for (int i = 0; i < 20; ++i)
+    // 默认映射：
+    // 0~9   左臂
+    // 10~19 右臂
+    // 如果你的 RobotState 顺序相反，只需要交换下面两个 offset。
+    auto updateJointTable = [this](QTableWidget *table, int offset)
     {
-        QString posText = "--";
-        QString velText = "--";
-        QString torText = "--";
-        QString enText = "--";
-
-        if (i < static_cast<int>(position_.size()))
+        for (int row = 0; row < 10; ++row)
         {
-            posText = QString::number(position_[i], 'f', 2);
-        }
+            const int idx = offset + row;
 
-        if (i < static_cast<int>(velocity_.size()))
-        {
-            velText = QString::number(velocity_[i], 'f', 2);
-        }
+            QString posText = "--";
+            QString velText = "--";
+            QString torText = "--";
+            QString enText = "--";
 
-        if (i < static_cast<int>(torque_.size()))
-        {
-            torText = QString::number(torque_[i], 'f', 3);
-        }
+            if (idx >= 0 && idx < static_cast<int>(position_.size()))
+            {
+                posText = QString::number(position_[idx], 'f', 2);
+            }
 
-        if (i < static_cast<int>(enabled_.size()))
-        {
-            enText = enabled_[i] ? "ON" : "OFF";
-        }
+            if (idx >= 0 && idx < static_cast<int>(velocity_.size()))
+            {
+                velText = QString::number(velocity_[idx], 'f', 2);
+            }
 
-        jointTable_->item(i, 1)->setText(posText);
-        jointTable_->item(i, 2)->setText(velText);
-        jointTable_->item(i, 3)->setText(torText);
-        jointTable_->item(i, 4)->setText(enText);
-    }
+            if (idx >= 0 && idx < static_cast<int>(torque_.size()))
+            {
+                torText = QString::number(torque_[idx], 'f', 3);
+            }
+
+            if (idx >= 0 && idx < static_cast<int>(enabled_.size()))
+            {
+                enText = enabled_[idx] ? "ON" : "OFF";
+            }
+
+            table->item(row, 1)->setText(posText);
+            table->item(row, 2)->setText(velText);
+            table->item(row, 3)->setText(torText);
+            table->item(row, 4)->setText(enText);
+        }
+    };
+
+    updateJointTable(leftJointTable_, 0);
+    updateJointTable(rightJointTable_, 10);
 
     // force_sensor 顺序：
     // 0~5   右手
@@ -610,7 +649,6 @@ void MainWindow::refreshUi()
     leftArmMyLabel_->setText("My: " + getForce(22));
     leftArmMzLabel_->setText("Mz: " + getForce(23));
 
-    Q_UNUSED(jointCount);
 }
 
 QString MainWindow::modeToString(int mode) const
