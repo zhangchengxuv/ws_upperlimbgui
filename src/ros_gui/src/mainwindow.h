@@ -150,6 +150,20 @@ private:
     QPushButton *activeSpringButton_ = nullptr;
     QTableWidget *jointTable_ = nullptr;
 
+    QLabel *rightHandFxLabel_ = nullptr;
+    QLabel *rightHandFyLabel_ = nullptr;
+    QLabel *rightHandFzLabel_ = nullptr;
+    QLabel *rightHandMxLabel_ = nullptr;
+    QLabel *rightHandMyLabel_ = nullptr;
+    QLabel *rightHandMzLabel_ = nullptr;
+
+    QLabel *rightArmFxLabel_ = nullptr;
+    QLabel *rightArmFyLabel_ = nullptr;
+    QLabel *rightArmFzLabel_ = nullptr;
+    QLabel *rightArmMxLabel_ = nullptr;
+    QLabel *rightArmMyLabel_ = nullptr;
+    QLabel *rightArmMzLabel_ = nullptr;
+
     QLabel *leftHandFxLabel_ = nullptr;
     QLabel *leftHandFyLabel_ = nullptr;
     QLabel *leftHandFzLabel_ = nullptr;
@@ -163,8 +177,6 @@ private:
     QLabel *leftArmMxLabel_ = nullptr;
     QLabel *leftArmMyLabel_ = nullptr;
     QLabel *leftArmMzLabel_ = nullptr;
-
-    
 
     QTextEdit *logTextEdit_ = nullptr;
 

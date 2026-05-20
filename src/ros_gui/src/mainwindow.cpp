@@ -271,11 +271,30 @@ MainWindow::MainWindow(QWidget *parent)
     jointLayout->addWidget(jointTable_);
 
     // 六维力区
-    QGroupBox *forceGroup = new QGroupBox("左侧六维力", dataWidget);
+    QGroupBox *forceGroup = new QGroupBox("六维力信息", dataWidget);
     QGridLayout *forceLayout = new QGridLayout(forceGroup);
+    forceLayout->setContentsMargins(12, 8, 12, 8);
+    forceLayout->setHorizontalSpacing(20);
+    forceLayout->setVerticalSpacing(6);
 
+    QLabel *rightHandTitle = new QLabel("右手传感器", forceGroup);
+    QLabel *rightArmTitle = new QLabel("右臂传感器", forceGroup);
     QLabel *leftHandTitle = new QLabel("左手传感器", forceGroup);
     QLabel *leftArmTitle = new QLabel("左臂传感器", forceGroup);
+
+    rightHandFxLabel_ = new QLabel("Fx: --", forceGroup);
+    rightHandFyLabel_ = new QLabel("Fy: --", forceGroup);
+    rightHandFzLabel_ = new QLabel("Fz: --", forceGroup);
+    rightHandMxLabel_ = new QLabel("Mx: --", forceGroup);
+    rightHandMyLabel_ = new QLabel("My: --", forceGroup);
+    rightHandMzLabel_ = new QLabel("Mz: --", forceGroup);
+
+    rightArmFxLabel_ = new QLabel("Fx: --", forceGroup);
+    rightArmFyLabel_ = new QLabel("Fy: --", forceGroup);
+    rightArmFzLabel_ = new QLabel("Fz: --", forceGroup);
+    rightArmMxLabel_ = new QLabel("Mx: --", forceGroup);
+    rightArmMyLabel_ = new QLabel("My: --", forceGroup);
+    rightArmMzLabel_ = new QLabel("Mz: --", forceGroup);
 
     leftHandFxLabel_ = new QLabel("Fx: --", forceGroup);
     leftHandFyLabel_ = new QLabel("Fy: --", forceGroup);
@@ -291,21 +310,38 @@ MainWindow::MainWindow(QWidget *parent)
     leftArmMyLabel_ = new QLabel("My: --", forceGroup);
     leftArmMzLabel_ = new QLabel("Mz: --", forceGroup);
 
-    forceLayout->addWidget(leftHandTitle, 0, 0, 1, 2);
-    forceLayout->addWidget(leftHandFxLabel_, 1, 0);
-    forceLayout->addWidget(leftHandFyLabel_, 1, 1);
-    forceLayout->addWidget(leftHandFzLabel_, 2, 0);
-    forceLayout->addWidget(leftHandMxLabel_, 2, 1);
-    forceLayout->addWidget(leftHandMyLabel_, 3, 0);
-    forceLayout->addWidget(leftHandMzLabel_, 3, 1);
+    // 布局：上排右手/右臂，下排左手/左臂
+    forceLayout->addWidget(rightHandTitle, 0, 0, 1, 2);
+    forceLayout->addWidget(rightHandFxLabel_, 1, 0);
+    forceLayout->addWidget(rightHandFyLabel_, 1, 1);
+    forceLayout->addWidget(rightHandFzLabel_, 2, 0);
+    forceLayout->addWidget(rightHandMxLabel_, 2, 1);
+    forceLayout->addWidget(rightHandMyLabel_, 3, 0);
+    forceLayout->addWidget(rightHandMzLabel_, 3, 1);
 
-    forceLayout->addWidget(leftArmTitle, 0, 2, 1, 2);
-    forceLayout->addWidget(leftArmFxLabel_, 1, 2);
-    forceLayout->addWidget(leftArmFyLabel_, 1, 3);
-    forceLayout->addWidget(leftArmFzLabel_, 2, 2);
-    forceLayout->addWidget(leftArmMxLabel_, 2, 3);
-    forceLayout->addWidget(leftArmMyLabel_, 3, 2);
-    forceLayout->addWidget(leftArmMzLabel_, 3, 3);
+    forceLayout->addWidget(rightArmTitle, 0, 2, 1, 2);
+    forceLayout->addWidget(rightArmFxLabel_, 1, 2);
+    forceLayout->addWidget(rightArmFyLabel_, 1, 3);
+    forceLayout->addWidget(rightArmFzLabel_, 2, 2);
+    forceLayout->addWidget(rightArmMxLabel_, 2, 3);
+    forceLayout->addWidget(rightArmMyLabel_, 3, 2);
+    forceLayout->addWidget(rightArmMzLabel_, 3, 3);
+
+    forceLayout->addWidget(leftHandTitle, 4, 0, 1, 2);
+    forceLayout->addWidget(leftHandFxLabel_, 5, 0);
+    forceLayout->addWidget(leftHandFyLabel_, 5, 1);
+    forceLayout->addWidget(leftHandFzLabel_, 6, 0);
+    forceLayout->addWidget(leftHandMxLabel_, 6, 1);
+    forceLayout->addWidget(leftHandMyLabel_, 7, 0);
+    forceLayout->addWidget(leftHandMzLabel_, 7, 1);
+
+    forceLayout->addWidget(leftArmTitle, 4, 2, 1, 2);
+    forceLayout->addWidget(leftArmFxLabel_, 5, 2);
+    forceLayout->addWidget(leftArmFyLabel_, 5, 3);
+    forceLayout->addWidget(leftArmFzLabel_, 6, 2);
+    forceLayout->addWidget(leftArmMxLabel_, 6, 3);
+    forceLayout->addWidget(leftArmMyLabel_, 7, 2);
+    forceLayout->addWidget(leftArmMzLabel_, 7, 3);
 
     dataMainLayout->addWidget(jointGroup, 3);
     dataMainLayout->addWidget(forceGroup, 1);
@@ -529,8 +565,8 @@ void MainWindow::refreshUi()
     }
 
     // force_sensor 顺序：
-    // 0~5 右手
-    // 6~11 右臂
+    // 0~5   右手
+    // 6~11  右臂
     // 12~17 左手
     // 18~23 左臂
     auto getForce = [this](int idx) -> QString
@@ -542,6 +578,23 @@ void MainWindow::refreshUi()
         return "--";
     };
 
+    // 右手：0~5
+    rightHandFxLabel_->setText("Fx: " + getForce(0));
+    rightHandFyLabel_->setText("Fy: " + getForce(1));
+    rightHandFzLabel_->setText("Fz: " + getForce(2));
+    rightHandMxLabel_->setText("Mx: " + getForce(3));
+    rightHandMyLabel_->setText("My: " + getForce(4));
+    rightHandMzLabel_->setText("Mz: " + getForce(5));
+
+    // 右臂：6~11
+    rightArmFxLabel_->setText("Fx: " + getForce(6));
+    rightArmFyLabel_->setText("Fy: " + getForce(7));
+    rightArmFzLabel_->setText("Fz: " + getForce(8));
+    rightArmMxLabel_->setText("Mx: " + getForce(9));
+    rightArmMyLabel_->setText("My: " + getForce(10));
+    rightArmMzLabel_->setText("Mz: " + getForce(11));
+
+    // 左手：12~17
     leftHandFxLabel_->setText("Fx: " + getForce(12));
     leftHandFyLabel_->setText("Fy: " + getForce(13));
     leftHandFzLabel_->setText("Fz: " + getForce(14));
@@ -549,6 +602,7 @@ void MainWindow::refreshUi()
     leftHandMyLabel_->setText("My: " + getForce(16));
     leftHandMzLabel_->setText("Mz: " + getForce(17));
 
+    // 左臂：18~23
     leftArmFxLabel_->setText("Fx: " + getForce(18));
     leftArmFyLabel_->setText("Fy: " + getForce(19));
     leftArmFzLabel_->setText("Fz: " + getForce(20));
