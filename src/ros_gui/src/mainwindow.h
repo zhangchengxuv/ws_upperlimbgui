@@ -61,6 +61,9 @@ enum ControlMode : int
 
     // 双臂镜像模式（主动）
     MODE_MIRROR_ACTIVE = 11,
+    
+     // 双手虚拟弹簧主动模式
+    MODE_ACTIVE_SPRING = 12,
 
 };
 
@@ -85,6 +88,7 @@ private slots:
     void onBilateralZeroForceClicked();
     void onMirrorClicked();
     void onMirrorActiveClicked();
+    void onActiveSpringClicked();
 
     void refreshUi();
 
@@ -143,7 +147,7 @@ private:
     QPushButton *bilateralZeroForceButton_ = nullptr;
     QPushButton *mirrorButton_ = nullptr;
     QPushButton *mirrorActiveButton_ = nullptr;
-
+    QPushButton *activeSpringButton_ = nullptr;
     QTableWidget *jointTable_ = nullptr;
 
     QLabel *leftHandFxLabel_ = nullptr;
@@ -159,6 +163,8 @@ private:
     QLabel *leftArmMxLabel_ = nullptr;
     QLabel *leftArmMyLabel_ = nullptr;
     QLabel *leftArmMzLabel_ = nullptr;
+
+    
 
     QTextEdit *logTextEdit_ = nullptr;
 

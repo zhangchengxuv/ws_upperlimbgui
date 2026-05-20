@@ -142,6 +142,7 @@ MainWindow::MainWindow(QWidget *parent)
     leftPassiveTPDButton_ = new QPushButton("左正弦被动（扭矩模式PD）", controlGroup);
     mirrorButton_ = new QPushButton("双臂镜像模式（零力）", controlGroup);
     mirrorActiveButton_ = new QPushButton("双臂镜像模式（主动）", controlGroup);
+    activeSpringButton_ = new QPushButton("双手虚拟弹簧主动模式", controlGroup);
 
     idleButton_->setCheckable(true);
     leftPresetButton_->setCheckable(true);
@@ -171,6 +172,7 @@ MainWindow::MainWindow(QWidget *parent)
     modeGroup->addButton(leftPassiveTPDButton_);
     modeGroup->addButton(mirrorButton_);
     modeGroup->addButton(mirrorActiveButton_);
+    modeGroup->addButton(activeSpringButton_);
 
     connect(idleButton_, &QPushButton::clicked, this, &MainWindow::onIdleClicked);
     connect(leftPresetButton_, &QPushButton::clicked, this, &MainWindow::onLeftPresetClicked);
@@ -184,7 +186,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(bilateralZeroForceButton_, &QPushButton::clicked, this, &MainWindow::onBilateralZeroForceClicked);
     connect(mirrorButton_, &QPushButton::clicked, this, &MainWindow::onMirrorClicked);
     connect(mirrorActiveButton_, &QPushButton::clicked, this, &MainWindow::onMirrorActiveClicked);
-
+    connect(activeSpringButton_, &QPushButton::clicked, this, &MainWindow::onActiveSpringClicked);
+    // --- IGNORE ---
     controlLayout->addWidget(idleButton_);
     controlLayout->addWidget(leftPresetButton_);
     controlLayout->addWidget(rightPresetButton_);
@@ -197,6 +200,7 @@ MainWindow::MainWindow(QWidget *parent)
     controlLayout->addWidget(leftPassiveTPDButton_);
     controlLayout->addWidget(mirrorButton_);
     controlLayout->addWidget(mirrorActiveButton_);
+    controlLayout->addWidget(activeSpringButton_);
     controlLayout->addStretch();
 
     // ================================
@@ -440,6 +444,11 @@ void MainWindow::onMirrorActiveClicked()
     publishCommand(MODE_MIRROR_ACTIVE);
 }
 
+void MainWindow::onActiveSpringClicked()
+{
+    publishCommand(MODE_ACTIVE_SPRING);
+}
+
 void MainWindow::systemStateCallback(const upperlimb_robot::msg::SystemState::SharedPtr msg)
 {
     QMutexLocker locker(&dataMutex_);
@@ -578,6 +587,8 @@ QString MainWindow::modeToString(int mode) const
         return "双臂镜像模式(零力)";
     case MODE_MIRROR_ACTIVE:
         return "双臂镜像模式(主动)";
+    case MODE_ACTIVE_SPRING:
+        return "双手虚拟弹簧主动模式";
 
     default:
         return QString("未知(%1)").arg(mode);
