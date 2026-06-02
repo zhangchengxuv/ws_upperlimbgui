@@ -64,6 +64,10 @@ enum ControlMode : int
 
     // 双手虚拟弹簧主动模式
     MODE_ACTIVE_SPRING = 12,
+
+    // 双侧主动模式
+    // 两侧手臂都进入主动/导纳控制，由控制端分别处理左右臂控制律
+    MODE_BILATERAL_ACTIVE = 13,
 };
 
 class MainWindow : public QMainWindow
@@ -88,6 +92,7 @@ private slots:
     void onMirrorClicked();
     void onMirrorActiveClicked();
     void onActiveSpringClicked();
+    void onBilateralActiveClicked();
 
     void refreshUi();
 
@@ -147,6 +152,7 @@ private:
     QPushButton *mirrorButton_ = nullptr;
     QPushButton *mirrorActiveButton_ = nullptr;
     QPushButton *activeSpringButton_ = nullptr;
+    QPushButton *bilateralActiveButton_ = nullptr;
 
     // 左右臂关节状态表分开显示
     QTableWidget *leftJointTable_ = nullptr;
