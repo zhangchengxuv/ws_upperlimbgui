@@ -68,6 +68,13 @@ enum ControlMode : int
     // 双侧主动模式
     // 两侧手臂都进入主动/导纳控制，由控制端分别处理左右臂控制律
     MODE_BILATERAL_ACTIVE = 13,
+
+    // 右臂主动模式
+    // 右臂 joint11~joint17 进入主动/导纳控制
+    MODE_RIGHT_ACTIVE = 14,
+
+    // 双手空间虚拟弹簧主动模式
+    MODE_ACTIVE_SPRING_3D = 15,
 };
 
 class MainWindow : public QMainWindow
@@ -83,6 +90,7 @@ private slots:
     void onLeftPresetClicked();
     void onRightPresetClicked();
     void onActiveClicked();
+    void onRightActiveClicked();
     void onZeroForceClicked();
     void onLeftPassivePID();
     void onLeftPassivePD();
@@ -92,6 +100,7 @@ private slots:
     void onMirrorClicked();
     void onMirrorActiveClicked();
     void onActiveSpringClicked();
+    void onActiveSpring3DClicked();
     void onBilateralActiveClicked();
 
     void refreshUi();
@@ -143,6 +152,7 @@ private:
     QPushButton *leftPresetButton_ = nullptr;
     QPushButton *rightPresetButton_ = nullptr;
     QPushButton *activeButton_ = nullptr;
+    QPushButton *rightActiveButton_ = nullptr;
     QPushButton *zeroForceButton_ = nullptr;
     QPushButton *leftPassivePIDButton_ = nullptr;
     QPushButton *leftPassivePDButton_ = nullptr;
@@ -152,6 +162,7 @@ private:
     QPushButton *mirrorButton_ = nullptr;
     QPushButton *mirrorActiveButton_ = nullptr;
     QPushButton *activeSpringButton_ = nullptr;
+    QPushButton *activeSpring3DButton_ = nullptr;
     QPushButton *bilateralActiveButton_ = nullptr;
 
     // 左右臂关节状态表分开显示
@@ -189,6 +200,20 @@ private:
     QLabel *leftArmMxLabel_ = nullptr;
     QLabel *leftArmMyLabel_ = nullptr;
     QLabel *leftArmMzLabel_ = nullptr;
+
+    // 虚拟弹簧状态显示
+    QLabel *springModeLabel_ = nullptr;
+    QLabel *springValidLabel_ = nullptr;
+
+    QLabel *springExLabel_ = nullptr;
+    QLabel *springEyLabel_ = nullptr;
+    QLabel *springEzLabel_ = nullptr;
+    QLabel *springENormLabel_ = nullptr;
+
+    QLabel *springFxLabel_ = nullptr;
+    QLabel *springFyLabel_ = nullptr;
+    QLabel *springFzLabel_ = nullptr;
+    QLabel *springFNormLabel_ = nullptr;
 
     QTextEdit *logTextEdit_ = nullptr;
 

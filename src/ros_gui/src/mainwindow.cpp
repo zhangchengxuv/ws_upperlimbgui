@@ -12,6 +12,7 @@
 #include <QMutexLocker>
 
 #include <algorithm>
+#include <cmath>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -136,6 +137,7 @@ MainWindow::MainWindow(QWidget *parent)
     leftPresetButton_ = new QPushButton("左预设位", controlGroup);
     rightPresetButton_ = new QPushButton("右预设位", controlGroup);
     activeButton_ = new QPushButton("左主动模式", controlGroup);
+    rightActiveButton_ = new QPushButton("右主动模式", controlGroup);
     zeroForceButton_ = new QPushButton("左零力模式", controlGroup);
     rightZeroForceButton_ = new QPushButton("右零力模式", controlGroup);
     bilateralZeroForceButton_ = new QPushButton("双臂零力模式", controlGroup);
@@ -144,13 +146,15 @@ MainWindow::MainWindow(QWidget *parent)
     leftPassiveTPDButton_ = new QPushButton("左正弦被动（扭矩模式PD）", controlGroup);
     mirrorButton_ = new QPushButton("双臂镜像模式（零力）", controlGroup);
     mirrorActiveButton_ = new QPushButton("双臂镜像模式（主动）", controlGroup);
-    activeSpringButton_ = new QPushButton("双手虚拟弹簧主动模式", controlGroup);
+    activeSpringButton_ = new QPushButton("双手 X 向虚拟弹簧主动模式", controlGroup);
+    activeSpring3DButton_ = new QPushButton("双手空间虚拟弹簧主动模式", controlGroup);
     bilateralActiveButton_ = new QPushButton("双侧主动模式", controlGroup);
     
     idleButton_->setCheckable(true);
     leftPresetButton_->setCheckable(true);
     rightPresetButton_->setCheckable(true);
     activeButton_->setCheckable(true);
+    rightActiveButton_->setCheckable(true);
     zeroForceButton_->setCheckable(true);
     rightZeroForceButton_->setCheckable(true);
     bilateralZeroForceButton_->setCheckable(true);
@@ -160,6 +164,7 @@ MainWindow::MainWindow(QWidget *parent)
     mirrorButton_->setCheckable(true);
     mirrorActiveButton_->setCheckable(true);
     activeSpringButton_->setCheckable(true);
+    activeSpring3DButton_->setCheckable(true);
     bilateralActiveButton_->setCheckable(true);
 
     idleButton_->setChecked(true);
@@ -170,6 +175,7 @@ MainWindow::MainWindow(QWidget *parent)
     modeGroup->addButton(leftPresetButton_);
     modeGroup->addButton(rightPresetButton_);
     modeGroup->addButton(activeButton_);
+    modeGroup->addButton(rightActiveButton_);
     modeGroup->addButton(zeroForceButton_);
     modeGroup->addButton(rightZeroForceButton_);
     modeGroup->addButton(bilateralZeroForceButton_);
@@ -179,12 +185,14 @@ MainWindow::MainWindow(QWidget *parent)
     modeGroup->addButton(mirrorButton_);
     modeGroup->addButton(mirrorActiveButton_);
     modeGroup->addButton(activeSpringButton_);
+    modeGroup->addButton(activeSpring3DButton_);
     modeGroup->addButton(bilateralActiveButton_);
 
     connect(idleButton_, &QPushButton::clicked, this, &MainWindow::onIdleClicked);
     connect(leftPresetButton_, &QPushButton::clicked, this, &MainWindow::onLeftPresetClicked);
     connect(rightPresetButton_, &QPushButton::clicked, this, &MainWindow::onRightPresetClicked);
     connect(activeButton_, &QPushButton::clicked, this, &MainWindow::onActiveClicked);
+    connect(rightActiveButton_, &QPushButton::clicked, this, &MainWindow::onRightActiveClicked);
     connect(zeroForceButton_, &QPushButton::clicked, this, &MainWindow::onZeroForceClicked);
     connect(leftPassivePIDButton_, &QPushButton::clicked, this, &MainWindow::onLeftPassivePID);
     connect(leftPassivePDButton_, &QPushButton::clicked, this, &MainWindow::onLeftPassivePD);
@@ -194,22 +202,33 @@ MainWindow::MainWindow(QWidget *parent)
     connect(mirrorButton_, &QPushButton::clicked, this, &MainWindow::onMirrorClicked);
     connect(mirrorActiveButton_, &QPushButton::clicked, this, &MainWindow::onMirrorActiveClicked);
     connect(activeSpringButton_, &QPushButton::clicked, this, &MainWindow::onActiveSpringClicked);
+    connect(activeSpring3DButton_, &QPushButton::clicked, this, &MainWindow::onActiveSpring3DClicked);
     connect(bilateralActiveButton_, &QPushButton::clicked, this, &MainWindow::onBilateralActiveClicked);
     // --- IGNORE ---
     controlLayout->addWidget(idleButton_);
+
     controlLayout->addWidget(leftPresetButton_);
     controlLayout->addWidget(rightPresetButton_);
+
     controlLayout->addWidget(activeButton_);
+    controlLayout->addWidget(rightActiveButton_);
+
     controlLayout->addWidget(zeroForceButton_);
     controlLayout->addWidget(rightZeroForceButton_);
     controlLayout->addWidget(bilateralZeroForceButton_);
+
+    controlLayout->addWidget(bilateralActiveButton_);
+
+    controlLayout->addWidget(activeSpringButton_);
+    controlLayout->addWidget(activeSpring3DButton_);
+
+    controlLayout->addWidget(mirrorButton_);
+    controlLayout->addWidget(mirrorActiveButton_);
+
     controlLayout->addWidget(leftPassivePIDButton_);
     controlLayout->addWidget(leftPassivePDButton_);
     controlLayout->addWidget(leftPassiveTPDButton_);
-    controlLayout->addWidget(mirrorButton_);
-    controlLayout->addWidget(mirrorActiveButton_);
-    controlLayout->addWidget(activeSpringButton_);
-    controlLayout->addWidget(bilateralActiveButton_);
+
     controlLayout->addStretch();
 
     // ================================
@@ -377,8 +396,42 @@ MainWindow::MainWindow(QWidget *parent)
     forceLayout->addWidget(leftArmMyLabel_, 7, 2);
     forceLayout->addWidget(leftArmMzLabel_, 7, 3);
 
+    // 虚拟弹簧状态区
+    QGroupBox *springGroup = new QGroupBox("虚拟弹簧状态", dataWidget);
+    QGridLayout *springLayout = new QGridLayout(springGroup);
+    springLayout->setContentsMargins(12, 8, 12, 8);
+    springLayout->setHorizontalSpacing(20);
+    springLayout->setVerticalSpacing(6);
+
+    springModeLabel_ = new QLabel("模式: --", springGroup);
+    springValidLabel_ = new QLabel("状态: --", springGroup);
+
+    springExLabel_ = new QLabel("ex: -- m", springGroup);
+    springEyLabel_ = new QLabel("ey: -- m", springGroup);
+    springEzLabel_ = new QLabel("ez: -- m", springGroup);
+    springENormLabel_ = new QLabel("|e|: -- m", springGroup);
+
+    springFxLabel_ = new QLabel("Fx: -- N", springGroup);
+    springFyLabel_ = new QLabel("Fy: -- N", springGroup);
+    springFzLabel_ = new QLabel("Fz: -- N", springGroup);
+    springFNormLabel_ = new QLabel("|F|: -- N", springGroup);
+
+    springLayout->addWidget(springModeLabel_, 0, 0);
+    springLayout->addWidget(springValidLabel_, 0, 1);
+
+    springLayout->addWidget(springExLabel_, 1, 0);
+    springLayout->addWidget(springEyLabel_, 1, 1);
+    springLayout->addWidget(springEzLabel_, 1, 2);
+    springLayout->addWidget(springENormLabel_, 1, 3);
+
+    springLayout->addWidget(springFxLabel_, 2, 0);
+    springLayout->addWidget(springFyLabel_, 2, 1);
+    springLayout->addWidget(springFzLabel_, 2, 2);
+    springLayout->addWidget(springFNormLabel_, 2, 3);
+
     dataMainLayout->addWidget(jointGroup, 3);
     dataMainLayout->addWidget(forceGroup, 1);
+    dataMainLayout->addWidget(springGroup, 1);
 
     // ================================
     // 右下：日志区
@@ -474,6 +527,11 @@ void MainWindow::onActiveClicked()
     publishCommand(MODE_ACTIVE);
 }
 
+void MainWindow::onRightActiveClicked()
+{
+    publishCommand(MODE_RIGHT_ACTIVE);
+}
+
 void MainWindow::onZeroForceClicked()
 {
     publishCommand(MODE_ZERO_FORCE);
@@ -517,6 +575,11 @@ void MainWindow::onMirrorActiveClicked()
 void MainWindow::onActiveSpringClicked()
 {
     publishCommand(MODE_ACTIVE_SPRING);
+}
+
+void MainWindow::onActiveSpring3DClicked()
+{
+    publishCommand(MODE_ACTIVE_SPRING_3D);
 }
 
 void MainWindow::onBilateralActiveClicked()
@@ -610,8 +673,8 @@ void MainWindow::refreshUi()
         }
     };
 
-    updateJointTable(leftJointTable_, 0);
-    updateJointTable(rightJointTable_, 10);
+    updateJointTable(leftJointTable_, 10);
+    updateJointTable(rightJointTable_, 0);
 
     // force_sensor 顺序：
     // 0~5   右手
@@ -659,6 +722,54 @@ void MainWindow::refreshUi()
     leftArmMyLabel_->setText("My: " + getForce(22));
     leftArmMzLabel_->setText("Mz: " + getForce(23));
 
+    auto getExtra = [this](int idx) -> double
+    {
+        if (idx >= 0 && idx < static_cast<int>(force_sensor_.size()))
+        {
+            return force_sensor_[idx];
+        }
+        return 0.0;
+    };
+
+    // force_sensor[0~23] 仍然是四个六维力传感器。
+    // force_sensor[24~33] 是控制节点追加的弹簧调试量：
+    // [mode, valid, ex, ey, ez, |e|, Fx, Fy, Fz, |F|]
+    const int springMode = static_cast<int>(std::lround(getExtra(24)));
+    const bool springValid = (getExtra(25) > 0.5);
+
+    const double ex = getExtra(26);
+    const double ey = getExtra(27);
+    const double ez = getExtra(28);
+    const double enorm = getExtra(29);
+
+    const double fx = getExtra(30);
+    const double fy = getExtra(31);
+    const double fz = getExtra(32);
+    const double fnorm = getExtra(33);
+
+    QString springModeText = "--";
+    if (springMode == 1)
+    {
+        springModeText = "X 向一维虚拟弹簧";
+    }
+    else if (springMode == 2)
+    {
+        springModeText = "空间三维虚拟弹簧";
+    }
+
+    springModeLabel_->setText("模式: " + springModeText);
+    springValidLabel_->setText(QString("状态: %1").arg(springValid ? "有效" : "无效/未启用"));
+
+    springExLabel_->setText(QString("ex: %1 m").arg(ex, 0, 'f', 4));
+    springEyLabel_->setText(QString("ey: %1 m").arg(ey, 0, 'f', 4));
+    springEzLabel_->setText(QString("ez: %1 m").arg(ez, 0, 'f', 4));
+    springENormLabel_->setText(QString("|e|: %1 m").arg(enorm, 0, 'f', 4));
+
+    springFxLabel_->setText(QString("Fx: %1 N").arg(fx, 0, 'f', 3));
+    springFyLabel_->setText(QString("Fy: %1 N").arg(fy, 0, 'f', 3));
+    springFzLabel_->setText(QString("Fz: %1 N").arg(fz, 0, 'f', 3));
+    springFNormLabel_->setText(QString("|F|: %1 N").arg(fnorm, 0, 'f', 3));
+
 }
 
 QString MainWindow::modeToString(int mode) const
@@ -673,6 +784,8 @@ QString MainWindow::modeToString(int mode) const
         return "右预设位";
     case MODE_ACTIVE:
         return "左主动模式";
+    case MODE_RIGHT_ACTIVE:
+        return "右主动模式";
     case MODE_ZERO_FORCE:
         return "左零力模式";
     case MODE_PASSIVE:
@@ -690,7 +803,9 @@ QString MainWindow::modeToString(int mode) const
     case MODE_MIRROR_ACTIVE:
         return "双臂镜像模式(主动)";
     case MODE_ACTIVE_SPRING:
-        return "双手虚拟弹簧主动模式";
+        return "双手 X 向虚拟弹簧主动模式";
+    case MODE_ACTIVE_SPRING_3D:
+        return "双手空间虚拟弹簧主动模式";
     case MODE_BILATERAL_ACTIVE:
         return "双侧主动模式";
 
